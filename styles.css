@@ -102,6 +102,19 @@ header > h1{
     font-size: 1.3rem;
 }
 
+#reset{
+    margin:10px auto;
+    display: block;
+    color: #292C34;
+    background-color: white;
+    padding: 0.5%;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 @media screen and (max-width: 570px){
     #user-label{
         position: absolute;

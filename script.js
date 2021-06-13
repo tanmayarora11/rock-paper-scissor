@@ -7,6 +7,7 @@ let result_p = document.querySelector(".result > p");
 let rock_div = $("#Rock");
 let paper_div = $("#Paper");
 let scissor_div = $("#Scissors");
+let reset = $("#reset");
 
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
@@ -42,7 +43,7 @@ function draw(userChoice, computerChoice) {
 
     userScore_span.text(userScore);
     computerScore_span.text(computerScore);
-    result_p.innerHTML = `${userChoice} ${smallUserWord} equals ${computerChoice} ${smallCompWord} . It's a draw.`;
+    result_p.innerHTML = `${userChoice} ${smallUserWord} equals ${computerChoice} ${smallCompWord} .<br> It's a draw.`;
 
     computerChoice_div.addClass('red-glow');
     console.log("draw" + computerChoice_div.hasClass('green-glow'));
@@ -99,6 +100,13 @@ function main() {
     rock_div.on('click', () => game("Rock"));
     paper_div.on('click', () => game("Paper"));
     scissor_div.on('click', () => game("Scissors"));
+    reset.on('click', () => {
+        userScore = 0;
+        computerScore = 0;
+        userScore_span.text(userScore);
+        computerScore_span.text(computerScore);
+        result_p.innerHTML = "Lets Play Rock-Paper-Scissor<br>And Win!";
+    });
 }
 
 main();
